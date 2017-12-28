@@ -7,6 +7,8 @@ class Api{
     //相当于静态
     companion object {
         val FINDURL:String="http://baobab.kaiyanapp.com/api/v2/"
+        val FINDURL2:String="http://baobab.kaiyanapp.com/api/v3/"
     }
+
 
 }

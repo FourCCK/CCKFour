@@ -12,7 +12,7 @@ import com.cck.FourTeam_Kotlin.cck.presenter.GoodsPresenter
  * Created by C-PC on 2017/12/21.
  */
 
-abstract class BaseFragment<T:GoodsPresenter> : Fragment() {
+abstract class BaseFragment<T: GoodsPresenter> : Fragment() {
     var presenter:T?=null
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         initView();

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                 .setImgSize(50f, 50f)
                 .setFontSize(14f)
                 .setTabPadding(4f, 6f, 10f)
-                .setChangeColor(Color.RED, Color.DKGRAY)
+                .setChangeColor(Color.BLACK, Color.GRAY)
                 .addTabItem("首页", R.drawable.tab_02, Fragment01::class.java)
                 .addTabItem("发现", R.drawable.tab_03, Fragment02::class.java)
                 .addTabItem("热门", R.drawable.tab_01, Fragment03::class.java)

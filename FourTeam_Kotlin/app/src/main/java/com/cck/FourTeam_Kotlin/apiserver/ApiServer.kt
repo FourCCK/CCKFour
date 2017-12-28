@@ -10,5 +10,5 @@ import retrofit2.http.Query
  */
 interface ApiServer{
     @GET("categories")
-    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<List<findbean>>
+    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<ArrayList<findbean>>
 }
