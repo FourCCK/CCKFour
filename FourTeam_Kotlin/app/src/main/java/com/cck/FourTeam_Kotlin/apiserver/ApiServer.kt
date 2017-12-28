@@ -1,6 +1,7 @@
 package com.cck.FourTeam_Kotlin.apiserver
 
 import com.bwie.bean.findbean
+import com.cck.FourTeam_Kotlin.gyz.model.hotbean.HotBean
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -10,5 +11,7 @@ import retrofit2.http.Query
  */
 interface ApiServer{
     @GET("categories")
-    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<List<findbean>>
+    fun getData(@Query("udid") udid: String, @Query("vc") vc:Int):Flowable<List<findbean>>
+    @GET("ranklist")
+    fun getHot(@Query("num") num:Int, @Query("strategy") strategy:String,@Query("udid")udid:String, @Query("vc") vc:Int):Flowable<HotBean>
 }
