@@ -1,5 +1,6 @@
 package com.example.kotlinmvp
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -29,7 +30,7 @@ class Fragment3 : Fragment(),HotView {
     }
     override fun showHot(hotBean: HotBean) {
 
-        hot_rv?.layoutManager= LinearLayoutManager(this!!.activity!!)
+        hot_rv?.layoutManager= LinearLayoutManager((this!!.activity as Context?)!!)
         val itemList = hotBean.itemList
         val adapter= HotWeeklyAdapter(activity,itemList)
         hot_rv.adapter=adapter

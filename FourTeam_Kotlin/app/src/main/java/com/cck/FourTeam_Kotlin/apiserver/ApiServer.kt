@@ -14,7 +14,10 @@ interface ApiServer{
         val BASE_URL:String="http://baobab.kaiyanapp.com/api/"
     }
     @GET("categories")
-    fun getData(@Query("udid") udid: String, @Query("vc") vc:Int):Flowable<List<findbean>>
+
+    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<ArrayList<findbean>>
+
     @GET("v3/ranklist")
     fun getHot(@Query("num") num:Int, @Query("strategy") strategy:String,@Query("udid")udid:String, @Query("vc") vc:Int):Flowable<HotBean>
+
 }
