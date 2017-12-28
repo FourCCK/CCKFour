@@ -18,6 +18,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 class HotWeeklyAdapter(context: Context, list: List<HotBean.ItemListBean>?): RecyclerView.Adapter<HotWeeklyAdapter.MyviewHodler>() {
       val context:Context=context
     val list:ArrayList<HotBean.ItemListBean>? = list as ArrayList<HotBean.ItemListBean>?
+    //初始化接口
     interface Onclicklistener{
         fun  Onclick(listbean: HotBean.ItemListBean)
     }
@@ -25,6 +26,7 @@ class HotWeeklyAdapter(context: Context, list: List<HotBean.ItemListBean>?): Rec
     fun setOnclicklistener(listener: Onclicklistener){
         this.listener=listener
     }
+    //绑定
     override fun onBindViewHolder(holder: MyviewHodler?, position: Int) {
         val listBean = list?.get(position)
 
@@ -37,16 +39,16 @@ class HotWeeklyAdapter(context: Context, list: List<HotBean.ItemListBean>?): Rec
         }
        // holder?.time?.setText(listBean?.data?.cover?.)
     }
-
+//初始化
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyviewHodler {
         val inflate = LayoutInflater.from(context).inflate(R.layout.hotitem, parent, false)
          return MyviewHodler(inflate)
     }
-
+//返回值
     override fun getItemCount(): Int {
        return list?.size!!
     }
-
+//内部类
     class MyviewHodler(itemView: View?) : RecyclerView.ViewHolder(itemView) {
            var sdv: SimpleDraweeView =itemView?.findViewById<SimpleDraweeView>(R.id.hot_sdv) as SimpleDraweeView
            var tltie:TextView=itemView?.findViewById<TextView>(R.id.tv_title)as TextView

@@ -12,7 +12,6 @@ import io.reactivex.subscribers.DisposableSubscriber
  */
 class GoodsPresenter(goodsView: GoodsView){
     val model:GoodsModel?= GoodsModel()
-
     val goodsView:GoodsView?=goodsView
 
     //让P跟M关联

@@ -45,8 +45,8 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile 'com.github.leifzhang:IjkLib:0.4.3'
-    testCompile 'junit:junit:4.12'
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    testCompile 'junit:junit:4.12'
 }
 repositories {
     mavenCentral()
