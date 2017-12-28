@@ -1,7 +1,11 @@
 package com.cck.FourTeam_Kotlin.apiserver
 
 import com.bwie.bean.findbean
+<<<<<<< HEAD
 import com.cck.FourTeam_Kotlin.csh.HomeBean
+=======
+import com.cck.FourTeam_Kotlin.gyz.model.hotbean.HotBean
+>>>>>>> 2e78d0b9ec5a78e626a8faac63dab26a65e765bb
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -10,7 +14,11 @@ import retrofit2.http.Query
  * Created by C-PC on 2017/12/27.
  */
 interface ApiServer{
+    companion object {
+        val BASE_URL:String="http://baobab.kaiyanapp.com/api/"
+    }
     @GET("categories")
+<<<<<<< HEAD
     fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<List<findbean>>
     //首页数据
     //获取首页第一页数据
@@ -18,5 +26,12 @@ interface ApiServer{
     @GET("feed")
     fun getHomeData(@Query("num")num :Int , @Query("udid")udid : String, @Query("vc")vc:Int):Flowable<List<HomeBean>>
 
+=======
+
+    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<ArrayList<findbean>>
+
+    @GET("v3/ranklist")
+    fun getHot(@Query("num") num:Int, @Query("strategy") strategy:String,@Query("udid")udid:String, @Query("vc") vc:Int):Flowable<HotBean>
+>>>>>>> 2e78d0b9ec5a78e626a8faac63dab26a65e765bb
 
 }

@@ -12,7 +12,6 @@ import io.reactivex.subscribers.DisposableSubscriber
  */
 class GoodsPresenter(goodsView: GoodsView){
     val model:GoodsModel?= GoodsModel()
-
     val goodsView:GoodsView?=goodsView
 
     //让P跟M关联
@@ -20,7 +19,7 @@ class GoodsPresenter(goodsView: GoodsView){
         val flowable = model!!.getServerData()
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSubscriber<List<findbean>>() {
+                .subscribeWith(object : DisposableSubscriber<ArrayList<findbean>>() {
                     override fun onComplete() {
 
                     }
@@ -29,7 +28,7 @@ class GoodsPresenter(goodsView: GoodsView){
 
                     }
 
-                    override fun onNext(t: List<findbean>?) {
+                    override fun onNext(t: ArrayList<findbean>?) {
                         //把数据给view
                         goodsView!!.showData(t!!)
                     }
