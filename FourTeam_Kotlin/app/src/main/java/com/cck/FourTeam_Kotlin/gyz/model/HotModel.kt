@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class HotModel {
     fun getHotModel(strategy: String?): Flowable<HotBean>? {
-        val retrofit = Retrofit.Builder().baseUrl("http://baobab.kaiyanapp.com/api/v3/").addConverterFactory(GsonConverterFactory.create())
+        val retrofit = Retrofit.Builder().baseUrl(ApiServer.BASE_URL).addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
         val apiServer = retrofit.create(ApiServer::class.java)

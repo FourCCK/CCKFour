@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.cck.FourTeam_Kotlin.R
 import com.cck.FourTeam_Kotlin.gyz.adapter.HotWeeklyAdapter
 import com.cck.FourTeam_Kotlin.gyz.model.hotbean.HotBean
@@ -30,6 +31,11 @@ class Fragment3 : Fragment(),HotView {
         val itemList = hotBean.itemList
         val adapter= HotWeeklyAdapter(activity,itemList)
         hot_rv.adapter=adapter
-
+    adapter.setOnclicklistener(object :HotWeeklyAdapter.Onclicklistener{
+        override fun Onclick(listbean: HotBean.ItemListBean) {
+            val title = listbean?.data?.title
+            Toast.makeText(activity, title, Toast.LENGTH_LONG).show()
+        }
+    })
     }
 }
