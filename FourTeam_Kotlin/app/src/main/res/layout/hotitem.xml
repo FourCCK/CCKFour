@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:id="@+id/hot_fl"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.facebook.drawee.view.SimpleDraweeView
+    android:id="@+id/hot_sdv"
+    android:layout_width="match_parent"
+    app:placeholderImage="@mipmap/ic_launcher"
+    android:layout_height="match_parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="1234"
+            android:id="@+id/tv_title"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#F0FFFF"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="1232344"
+            android:id="@+id/tv_time"
+            android:textColor="#F0FFFF"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</FrameLayout>

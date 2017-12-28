@@ -7,6 +7,7 @@ import com.cck.FourTeam_Kotlin.fragment.Fragment01
 import com.cck.FourTeam_Kotlin.fragment.Fragment02
 import com.cck.FourTeam_Kotlin.fragment.Fragment03
 import com.cck.FourTeam_Kotlin.fragment.Fragment04
+import com.facebook.drawee.backends.pipeline.Fresco
 import com.hjm.bottomtabbar.BottomTabBar
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        Fresco.initialize(this)
         btb.init(supportFragmentManager)
                 .setImgSize(50f, 50f)
                 .setFontSize(14f)
