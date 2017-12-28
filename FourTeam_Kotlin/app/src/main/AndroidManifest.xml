@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.BaseActivity" />
-<<<<<<< HEAD
+
         <activity android:name=".VideoActivity"></activity>
-=======
+
         <activity android:name=".activity.FindxpActivity"></activity>
->>>>>>> 70d09f73d3cee0c969eadd430f98df5e320417f6
+
     </application>
 
 </manifest>
