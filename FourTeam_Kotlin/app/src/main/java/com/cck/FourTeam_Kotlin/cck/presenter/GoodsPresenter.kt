@@ -19,7 +19,11 @@ class GoodsPresenter(goodsView: GoodsView){
         val flowable = model!!.getServerData()
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+<<<<<<< HEAD
                 .subscribeWith(object : DisposableSubscriber<List<findbean>>(){
+=======
+                .subscribeWith(object : DisposableSubscriber<List<findbean>>() {
+>>>>>>> 6b7c121f96aea611d8e42daee30302e888be5464
                     override fun onComplete() {
 
                     }
@@ -28,7 +32,14 @@ class GoodsPresenter(goodsView: GoodsView){
                      goodsView?.showData((t as ArrayList<findbean>?)!!)
                     }
 
+<<<<<<< HEAD
                     override fun onError(t: Throwable?) {
+=======
+                    override fun onNext(t: List<findbean>?) {
+                        //把数据给view
+                        goodsView!!.showData(t!!)
+                    }
+>>>>>>> 6b7c121f96aea611d8e42daee30302e888be5464
 
                     }
                 })

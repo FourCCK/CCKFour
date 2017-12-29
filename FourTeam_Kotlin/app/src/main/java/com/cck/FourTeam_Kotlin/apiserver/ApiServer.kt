@@ -25,6 +25,12 @@ interface ApiServer{
     @GET("feed")
     fun getHomeData(@Query("num")num :Int , @Query("udid")udid : String, @Query("vc")vc:Int):Flowable<HomeBean>
 
+<<<<<<< HEAD
+=======
+=======
+
+    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<List<findbean>>
+>>>>>>> 6b7c121f96aea611d8e42daee30302e888be5464
 
     @GET("v3/ranklist")
     fun getHot(@Query("num") num:Int, @Query("strategy") strategy:String,@Query("udid")udid:String, @Query("vc") vc:Int):Flowable<HotBean>
