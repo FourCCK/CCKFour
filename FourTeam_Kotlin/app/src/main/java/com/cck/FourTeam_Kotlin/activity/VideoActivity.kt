@@ -13,8 +13,6 @@ class VideoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video)
-
-
        val ijk=findViewById(R.id.ijk) as IjkVideoView
         //intent传值
         val stringExtra = intent.getStringExtra("url")

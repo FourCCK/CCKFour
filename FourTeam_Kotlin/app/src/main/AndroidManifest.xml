@@ -5,25 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-=======
-<<<<<<< HEAD
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-=======
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8feb7b00638babcd8d409115b4106a14a2eb3abb
->>>>>>> 6b7c121f96aea611d8e42daee30302e888be5464
->>>>>>> 7c803e8c8ea3272c4e209b0edc42c4dc2acbe26f
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,62 +24,23 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.BaseActivity" />
-<<<<<<< HEAD
         <activity android:name=".whl.HeadActivity" />
         <activity android:name=".activity.VideoActivity" />
         <activity android:name=".activity.FindxpActivity" />
-        <activity android:name=".activity.SousuoActivity"></activity>
-=======
-<<<<<<< HEAD
-
-        <activity android:name=".whl.HeadActivity"></activity>
-
-
-        <activity android:name=".VideoActivity"></activity>
-
-        <activity android:name=".activity.FindxpActivity"></activity>
-
-=======
-<<<<<<< HEAD
-
-        <activity android:name=".whl.HeadActivity"></activity>
-
-        <activity android:name=".VideoActivity"></activity>
-
-        <activity android:name=".activity.FindxpActivity"></activity>
-
-=======
-<<<<<<< HEAD
-
-        <activity android:name=".whl.HeadActivity"></activity>
-
-
-        <activity android:name=".VideoActivity"></activity>
-
-        <activity android:name=".activity.FindxpActivity"></activity>
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-        <activity android:name=".whl.HeadActivity"></activity>
-=======
-<<<<<<< HEAD
->>>>>>> 2ec885a0a5a73a79e9149602e1634746715bfab6
-        <activity android:name=".VideoActivity"></activity>
-
-        <activity android:name=".activity.FindxpActivity"></activity>
-<<<<<<< HEAD
-
-=======
->>>>>>> 70d09f73d3cee0c969eadd430f98df5e320417f6
->>>>>>> 94b0c39049099f141402a81b9611193806e756bd
->>>>>>> 2ec885a0a5a73a79e9149602e1634746715bfab6
->>>>>>> 8456960e8e98ad3ef2996449772935e987b544d6
->>>>>>> 8feb7b00638babcd8d409115b4106a14a2eb3abb
->>>>>>> 6b7c121f96aea611d8e42daee30302e888be5464
->>>>>>> 7c803e8c8ea3272c4e209b0edc42c4dc2acbe26f
+        <activity android:name=".activity.SousuoActivity" />
+        <activity android:name=".whl.HeadActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".activity.FindxpActivity" />
+        <activity android:name=".whl.HeadActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".activity.FindxpActivity" />
+        <activity android:name=".whl.HeadActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".activity.FindxpActivity" />
+        <activity android:name=".whl.HeadActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".activity.FindxpActivity" />
+        <activity android:name=".activity.SouuoRecyclerviewActivity"></activity>
     </application>
 
 </manifest>

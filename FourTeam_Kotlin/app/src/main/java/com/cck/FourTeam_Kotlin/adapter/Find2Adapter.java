@@ -11,12 +11,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cck.FourTeam_Kotlin.R;
-import com.cck.FourTeam_Kotlin.VideoActivity;
+import com.cck.FourTeam_Kotlin.activity.VideoActivity;
 import com.cck.FourTeam_Kotlin.bean.find2Bean;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
 /**
  * Created by C-PC on 2017/12/28.
  */

@@ -4,10 +4,9 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-<<<<<<< HEAD
-=======
+
 import android.view.View
->>>>>>> 7c803e8c8ea3272c4e209b0edc42c4dc2acbe26f
+
 import com.cck.FourTeam_Kotlin.fragment.Fragment01
 import com.cck.FourTeam_Kotlin.fragment.Fragment02
 import com.cck.FourTeam_Kotlin.fragment.Fragment03

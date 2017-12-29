@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.astuetz.PagerSlidingTabStrip
 import com.cck.FourTeam_Kotlin.R
 import com.cck.FourTeam_Kotlin.activity.SousuoActivity
@@ -13,7 +14,6 @@ import com.cck.FourTeam_Kotlin.gyz.fragmnet.myPagerAdapter
 import com.example.kotlinmvp.Fragment1
 import com.example.kotlinmvp.Fragment2
 import com.example.kotlinmvp.Fragment3
-import kotlinx.android.synthetic.main.fragment03.*
 
 
 /**
@@ -25,6 +25,7 @@ class Fragment03 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val inflate = inflater!!.inflate(R.layout.fragment03, container, false)
         val viewPager = inflate.findViewById<ViewPager>(R.id.viewPager) as ViewPager
+        val imageView = inflate.findViewById<ImageView>(R.id.sousuo_iv) as ImageView
         val tabStrip = inflate.findViewById<PagerSlidingTabStrip>(R.id.tabs) as PagerSlidingTabStrip
         val fragments = ArrayList<Fragment>()
         val fragment1 = Fragment1()
@@ -36,7 +37,7 @@ class Fragment03 : Fragment() {
         pager = myPagerAdapter(this.fragmentManager)
         viewPager?.setAdapter(pager)
         tabStrip?.setViewPager(viewPager)
-          sousuo_iv.setOnClickListener(object :View.OnClickListener{
+        imageView.setOnClickListener(object :View.OnClickListener{
               override fun onClick(v: View?) {
                   val intent = activity.intent.setClass(activity, SousuoActivity::class.java)
                   startActivity(intent)

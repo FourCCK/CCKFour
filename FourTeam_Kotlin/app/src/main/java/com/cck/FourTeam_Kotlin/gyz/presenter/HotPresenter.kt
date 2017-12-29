@@ -17,7 +17,7 @@ class HotPresenter(hotview: HotView) {
         val flowable = model!!.getHotModel(strategy)
         flowable?.subscribeOn(Schedulers.io())
                 ?.observeOn(AndroidSchedulers.mainThread())
-                ?.subscribeWith(object : DisposableSubscriber<HotBean>(){
+                ?.subscribeWith(object : DisposableSubscriber <HotBean>(){
                     override fun onNext(t: HotBean?) {
                         hotview?.showHot(t!!)
                     }

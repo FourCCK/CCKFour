@@ -1,29 +1,24 @@
-package com.cck.FourTeam_Kotlin.cck.model
+package com.cck.FourTeam_Kotlin.gyz.model
 
-import com.bwie.bean.findbean
-import com.cck.FourTeam_Kotlin.api.Api
 import com.cck.FourTeam_Kotlin.apiserver.ApiServer
+import com.cck.FourTeam_Kotlin.gyz.model.hotbean.HotBean
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import io.reactivex.Flowable
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
- * Created by C-PC on 2017/12/27.
+ * Created by GUO on 2017/12/29.
  */
-
-class GoodsModel {
-
-    //进行网络请求
-    fun getServerData():Flowable<ArrayList<findbean>>{
-
-
-        val retrofit = Retrofit.Builder().baseUrl(Api.FINDURL)
+class SousuoModel {
+    fun getSousuo(num:Int,query:String,start:Int): Flowable<HotBean> {
+        val retrofit = Retrofit.Builder().baseUrl(ApiServer.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
+        //通过反射动态代理拿到apiserce
         val apiServer = retrofit.create(ApiServer::class.java)
-        val flowable = apiServer.getData("26868b32e808498db32fd51fb422d00175e179df", 83)
+        val flowable = apiServer.getSOusuo(10, query, start)
         return flowable
-    }
+     }
 }

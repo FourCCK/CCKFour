@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.cck.FourTeam_Kotlin.R
-import com.cck.FourTeam_Kotlin.VideoActivity
+import com.cck.FourTeam_Kotlin.activity.VideoActivity
 
 /**
  * Created by 曹少航 on 2017/12/28.
@@ -64,7 +64,7 @@ class HomeAdapter(context: Context, list:List<HomeBean.IssueListBean.ItemListBea
         holder?.home_feed?.setOnClickListener{
             litener?.onItemClick(position)
 
-           var intent: Intent =Intent(context,VideoActivity::class.java)
+           var intent: Intent =Intent(context, VideoActivity::class.java)
             intent.putExtra("url",playUrl)
             intent.putExtra("title",title)
             intent.putExtra("description",description)
