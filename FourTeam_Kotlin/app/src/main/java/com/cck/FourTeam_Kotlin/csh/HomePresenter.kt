@@ -15,7 +15,7 @@ class HomePresenter(homeView: HomeView) {
         val flowable = model!!.getServiceData()
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSubscriber<List<HomeBean>>(){
+                .subscribeWith(object : DisposableSubscriber<HomeBean>(){
                     override fun onError(t: Throwable?) {
 
                     }
@@ -23,7 +23,7 @@ class HomePresenter(homeView: HomeView) {
 
                     }
 
-                    override fun onNext(t: List<HomeBean>?) {
+                    override fun onNext(t: HomeBean?) {
                         //把数据给view
                         homeView!!.showData(t!!)
                     }
