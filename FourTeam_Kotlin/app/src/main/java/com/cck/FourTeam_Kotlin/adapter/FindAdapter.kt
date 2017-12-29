@@ -13,15 +13,14 @@ import com.bwie.bean.findbean
 import com.cck.FourTeam_Kotlin.R
 import com.cck.FourTeam_Kotlin.activity.FindxpActivity
 import com.squareup.picasso.Picasso
-import java.util.*
 
 
 /**
  * Created by C-PC on 2017/12/27.
  */
-class FindAdapter(mCtx:Context,list: ArrayList<findbean>):RecyclerView.Adapter<FindAdapter.MHolder>(){
+class FindAdapter(mCtx:Context,list: List<findbean>):RecyclerView.Adapter<FindAdapter.MHolder>(){
     private var context:Context=mCtx
-    private var list:ArrayList<findbean> = list
+    private var list:List<findbean> = list
 
 
 
