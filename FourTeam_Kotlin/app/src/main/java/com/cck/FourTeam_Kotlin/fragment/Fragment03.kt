@@ -8,11 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.astuetz.PagerSlidingTabStrip
 import com.cck.FourTeam_Kotlin.R
+import com.cck.FourTeam_Kotlin.activity.SousuoActivity
 import com.cck.FourTeam_Kotlin.gyz.fragmnet.myPagerAdapter
 import com.example.kotlinmvp.Fragment1
 import com.example.kotlinmvp.Fragment2
 import com.example.kotlinmvp.Fragment3
-
+import kotlinx.android.synthetic.main.fragment03.*
 
 
 /**
@@ -35,6 +36,13 @@ class Fragment03 : Fragment() {
         pager = myPagerAdapter(this.fragmentManager)
         viewPager?.setAdapter(pager)
         tabStrip?.setViewPager(viewPager)
+          sousuo_iv.setOnClickListener(object :View.OnClickListener{
+              override fun onClick(v: View?) {
+                  val intent = activity.intent.setClass(activity, SousuoActivity::class.java)
+                  startActivity(intent)
+              }
+
+          })
         return inflate
 
     }

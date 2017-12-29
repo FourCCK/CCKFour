@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.cck.FourTeam_Kotlin.R
-import com.cck.FourTeam_Kotlin.VideoActivity
+import com.cck.FourTeam_Kotlin.activity.VideoActivity
 import com.cck.FourTeam_Kotlin.gyz.adapter.HotWeeklyAdapter
 import com.cck.FourTeam_Kotlin.gyz.model.hotbean.HotBean
 import com.cck.FourTeam_Kotlin.gyz.presenter.HotPresenter
@@ -42,7 +42,7 @@ class Fragment2: Fragment(), HotView {
                   // val title = listbean?.data?.title
                  //  Toast.makeText(activity, title, Toast.LENGTH_LONG).show()
                    //跳转activity
-                   activity.intent.setClass(activity,VideoActivity::class.java)
+                   activity.intent.setClass(activity, VideoActivity::class.java)
                    //传值
                    activity.intent.putExtra("url",listbean?.data?.playUrl)
                    activity.intent.putExtra("title",listbean?.data?.title)

@@ -1,8 +1,9 @@
-package com.cck.FourTeam_Kotlin
+package com.cck.FourTeam_Kotlin.activity
 
 import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.cck.FourTeam_Kotlin.R
 import kotlinx.android.synthetic.main.activity_video.*
 import tv.danmaku.ijk.media.widget.media.AndroidMediaController
 import tv.danmaku.ijk.media.widget.media.IjkVideoView

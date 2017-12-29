@@ -6,5 +6,5 @@ import com.bwie.bean.findbean
  * Created by C-PC on 2017/12/27.
  */
 interface GoodsView{
-    fun showData(findbean:ArrayList<findbean>)
+    fun showData(findbean:List<findbean>)
 }
