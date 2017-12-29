@@ -13,6 +13,7 @@ import com.cck.FourTeam_Kotlin.R
 import com.cck.FourTeam_Kotlin.adapter.FindAdapter
 import com.cck.FourTeam_Kotlin.cck.presenter.GoodsPresenter
 import com.cck.FourTeam_Kotlin.cck.view.GoodsView
+import java.util.*
 
 
 /**
@@ -31,9 +32,9 @@ class Fragment02 : Fragment(), GoodsView {
         return view
     }
     //重写view的方法
-    override fun showData(findbean: ArrayList<findbean>) {
+    override fun showData(findbean: List<findbean>) {
         Log.i("xxx", findbean.get(0).name);
-            var adapter=FindAdapter(activity,findbean)
+            var adapter=FindAdapter(activity, findbean as ArrayList<findbean>)
         var re=view!!.findViewById<RecyclerView>(R.id.rv) as RecyclerView;
         re!!.layoutManager= GridLayoutManager(activity,2)
             re!!.adapter=adapter

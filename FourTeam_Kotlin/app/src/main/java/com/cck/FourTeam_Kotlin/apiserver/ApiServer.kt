@@ -15,7 +15,7 @@ interface ApiServer{
     }
     @GET("categories")
 
-    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<ArrayList<findbean>>
+    fun getData(@Query("udid")udid:String,@Query("vc") vc:Int):Flowable<List<findbean>>
 
     @GET("v3/ranklist")
     fun getHot(@Query("num") num:Int, @Query("strategy") strategy:String,@Query("udid")udid:String, @Query("vc") vc:Int):Flowable<HotBean>

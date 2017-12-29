@@ -12,12 +12,12 @@ import retrofit2.converter.gson.GsonConverterFactory
  * Created by C-PC on 2017/12/27.
  */
 class GoodsModel{
-<<<<<<< HEAD
+
     //进行网络请求
     fun getServerData():Flowable<List<findbean>>{
-=======
-    fun getServerData():Flowable<ArrayList<findbean>>{
->>>>>>> 70d09f73d3cee0c969eadd430f98df5e320417f6
+
+
+
         val retrofit = Retrofit.Builder().baseUrl(Api.FINDURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

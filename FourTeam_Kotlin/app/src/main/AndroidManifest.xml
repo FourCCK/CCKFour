@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cck.FourTeam_Kotlin">
-<<<<<<< HEAD
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-=======
+
 
     <uses-permission android:name="android.permission.INTERNET" />
 
->>>>>>> 94b0c39049099f141402a81b9611193806e756bd
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,15 +25,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.BaseActivity" />
-<<<<<<< HEAD
+
         <activity android:name=".whl.HeadActivity"></activity>
-=======
-<<<<<<< HEAD
+
         <activity android:name=".VideoActivity"></activity>
-=======
+
         <activity android:name=".activity.FindxpActivity"></activity>
->>>>>>> 70d09f73d3cee0c969eadd430f98df5e320417f6
->>>>>>> 94b0c39049099f141402a81b9611193806e756bd
+
     </application>
 
 </manifest>
