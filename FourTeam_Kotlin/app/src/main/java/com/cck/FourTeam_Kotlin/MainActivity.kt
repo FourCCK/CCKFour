@@ -3,7 +3,6 @@ package com.cck.FourTeam_Kotlin
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.cck.FourTeam_Kotlin.fragment.Fragment01
 import com.cck.FourTeam_Kotlin.fragment.Fragment02
 import com.cck.FourTeam_Kotlin.fragment.Fragment03
 import com.cck.FourTeam_Kotlin.fragment.Fragment04

@@ -36,7 +36,7 @@ class Fragment02 : Fragment(), GoodsView {
         Log.i("xxx", findbean.get(0).name);
             var adapter=FindAdapter(activity, findbean as ArrayList<findbean>)
         var re=view!!.findViewById<RecyclerView>(R.id.rv) as RecyclerView;
-        re!!.layoutManager= GridLayoutManager(activity,2)
+        re!!.layoutManager= GridLayoutManager(activity,2) as RecyclerView.LayoutManager?
             re!!.adapter=adapter
 
     }
