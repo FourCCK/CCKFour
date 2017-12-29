@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class GoodsModel{
 
     //进行网络请求
+<<<<<<< HEAD
     fun getServerData():Flowable<ArrayList<findbean>>{
 
         val retrofit = Retrofit.Builder().baseUrl(Api.FINDURL)
@@ -24,4 +25,19 @@ class GoodsModel{
         val flowable = apiServer.getData("26868b32e808498db32fd51fb422d00175e179df", 83)
         return flowable
     }
+=======
+
+
+        fun getServerData(): Flowable<ArrayList<findbean>> {
+
+            val retrofit = Retrofit.Builder().baseUrl(Api.FINDURL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+            val apiServer = retrofit.create(ApiServer::class.java)
+            val flowable = apiServer.getData("26868b32e808498db32fd51fb422d00175e179df", 83)
+            return flowable;
+        }
+
+>>>>>>> 8456960e8e98ad3ef2996449772935e987b544d6
 }
