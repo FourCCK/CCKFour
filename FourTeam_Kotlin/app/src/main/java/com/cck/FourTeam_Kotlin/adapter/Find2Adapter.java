@@ -1,6 +1,7 @@
 package com.cck.FourTeam_Kotlin.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cck.FourTeam_Kotlin.R;
+import com.cck.FourTeam_Kotlin.VideoActivity;
 import com.cck.FourTeam_Kotlin.bean.find2Bean;
 import com.squareup.picasso.Picasso;
 
@@ -37,14 +39,23 @@ public class Find2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         MyViewHolder myViewHolder= (MyViewHolder) holder;
+        final String playUrl = list.get(position).getData().getPlayUrl();
+        final String title = list.get(position).getData().getTitle();
+        final String description = list.get(position).getData().getDescription();
         Picasso.with(context).load(list.get(position).getData().getCover().getFeed()).into(myViewHolder.findxqtu);
+//        Uri parse = Uri.parse(playUrl);
+//           myViewHolder.findxqtu.setImageURI(parse);
         myViewHolder.findxqnamee.setText(list.get(position).getData().getTitle());
         myViewHolder.name.setText(list.get(position).getData().getCategory());
         myViewHolder.miao.setText(list.get(position).getData().getDuration()+"");
         myViewHolder.rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(context, VideoActivity.class);
+                intent.putExtra("url",playUrl);
+                intent.putExtra("title",title);
+                intent.putExtra("description",description);
+                context.startActivity(intent);
             }
         });
     }

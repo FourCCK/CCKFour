@@ -22,6 +22,6 @@ public interface ApiService {
     @POST("file/upload")
     Call<ResultBean> uploadPic(@Part("uid") RequestBody uid, @Part MultipartBody.Part file);
 
-    @GET("user/getUserInfo?uid=552&token=4B5DAF274221936555E01E5F7BC271F4")
+    @GET("user/getUserInfo?uid=1633&token=F309BCC258F0D7ECB396600350AC74A3")
     Flowable<UserBean> getdd();
 }
