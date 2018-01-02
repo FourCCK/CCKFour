@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp">
         <EditText
+            android:hint="帮你找到感兴趣的视频"
+            android:textSize="18dp"
             android:id="@+id/sousuo_et"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -21,4 +23,17 @@
             android:layout_width="30dp"
             android:layout_height="40dp" />
     </LinearLayout>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:text="输入标题或描述中的关键词更多视频"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_height="20dp" />
+    <TextView
+        android:text="-热门搜索词-"
+        android:textSize="20dp"
+        android:layout_width="150dp"
+       android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_height="30dp" />
 </LinearLayout>

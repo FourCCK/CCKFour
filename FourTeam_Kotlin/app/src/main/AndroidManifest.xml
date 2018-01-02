@@ -40,7 +40,8 @@
         <activity android:name=".whl.HeadActivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".activity.FindxpActivity" />
-        <activity android:name=".activity.SouuoRecyclerviewActivity"></activity>
+        <activity android:name=".activity.SouuoRecyclerviewActivity" />
+        <activity android:name=".activity.WecomeActivity"></activity>
     </application>
 
 </manifest>

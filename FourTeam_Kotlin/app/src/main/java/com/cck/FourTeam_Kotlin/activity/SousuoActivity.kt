@@ -4,8 +4,10 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import com.cck.FourTeam_Kotlin.R
 import kotlinx.android.synthetic.main.activity_sousuo.*
 
@@ -13,7 +15,8 @@ class SousuoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sousuo)
-       // 第三种
+        val editText = findViewById(R.id.sousuo_et) as EditText
+        // 第三种
         if (Build.VERSION.SDK_INT >= 21) {
             val decorView = window.decorView
             val option = (View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -25,18 +28,21 @@ class SousuoActivity : AppCompatActivity() {
         }
         val actionBar = supportActionBar
         actionBar!!.hide()
-        val editText = findViewById(R.id.sousuo_et) as EditText
         sousuo_tv.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
-                val String1 = editText.text.toString().trim()
-                val intent = intent.setClass(this@SousuoActivity, SouuoRecyclerviewActivity::class.java)
-                intent.putExtra("query",String1)
-                startActivity(intent)
+                val trim = editText.text.toString().trim()
+                if (TextUtils.isEmpty(trim)){
+                    Toast.makeText(this@SousuoActivity,"请输入用户名",Toast.LENGTH_LONG).show()
+
+                }else {
+                    Toast.makeText(this@SousuoActivity, trim, Toast.LENGTH_LONG).show()
+                    val intent = intent.setClass(this@SousuoActivity, SouuoRecyclerviewActivity::class.java)
+                    intent.putExtra("query", trim)
+                    startActivity(intent)
+                    this@SousuoActivity.finish()
+                }
             }
 
         })
-
     }
-
-
 }

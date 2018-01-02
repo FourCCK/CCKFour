@@ -40,10 +40,10 @@ class SouuoRecyclerviewActivity : AppCompatActivity(),HotView {
 
         })
              val presenter=SousuoPresenter(this)
-        presenter.relevance(10,stringExtra,30)
+        presenter.relevance(10,stringExtra,10)
     }
     override fun showHot(hotBean: HotBean) {
-        sousuo_rv.layoutManager=LinearLayoutManager(this)
+        sousuo_rv.layoutManager= LinearLayoutManager(this)
         val itemList = hotBean.itemList
          var adapter=SousuoRecyclerviewAdapter(this, itemList as ArrayList<HotBean.ItemListBean>)
       sousuo_rv.adapter=adapter
